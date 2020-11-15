@@ -1,0 +1,498 @@
+<!--İnternet tabanlı programlama ders notları-->
+<!--
+    eğitim sırasında kullanacağımız araçlar;
+        wampserver2.5
+        codelgniter
+        joomla              !!!araştır bunları 
+    <html></html> bütün html dostaları bu kodlarla başlar ve biter
+    <head></head> temel özellikler sayfa başlığı, yazı karakterler kümesi, link gibi özellikler burada tanımlanır
+    <title> başlık yani sekmedeki başlık olarak düşünebilirsin bunu
+    *internetin temelini WAN(Wide Area Network) dediğimiz geniş alan ağı oluşturur.
+    *BROWSER: chrome,firefox gibi programlar web sunucusuna bağlanan, orada işaret edilen html belgesini alıp okuyan ve okuduklarını yorumlayıp ekrana getiren programdır
+    *WWW: W3(World Wide Web) çoklu hiper ortam sistemidir 
+    *http:// : Hyper Text Transfer Protocol veya hyper terminal transmision protocol(geçiş veya transfer protokolü)
+    *WWW : world wide web (geniş dünya ağı)
+    *SUNUCU(SERVER): bir ağ üzerindeki diğer bilgisayarlara servis sağlayan bilgisayarlardır
+    *İSTEMCİ (CLİENT) : Bir ağ üzerinde, sunucu bilgisayarlardan hizmet alan kullanıcı bilgisayarlarıdır.
+    *HTML bir programlama dili değil metin işaretleme dilidir.
+
+-->
+<!-- bir web sayfasının genel yapısı-->
+<html>
+    <head><!--temel özellikler sayfa başlığı yazı karakterleri,link özellikleri sayfanın nasıl görüntüleneceği yazar-->
+        <title>başlık metni</title> <!--metni pencere başlığı olarak kabul eder -->
+    </head>
+    <body>
+        body metni
+    </body>
+</html>
+<!-- HTML DİLİ TAGLARINA BAKALIM-->
+<!-- TEXT: sayfadaki yazıların renk ile belirtilen değeri verir.
+    LİNK:  sayfadaki yazıların renk ile belirtilen değeri verir.
+    VLİNK:ziyaret edilmiş bağları rengine renk ile belirtilen değeri verir.
+    ALİNK: aktif bağ renk 
+    BGCOLOR: arka plan rengi 
+    BACKGROUNG: arka plana resim koyabilmemizi sağlar 
+    TOP MARGİN: üst kenara olan uzaklığı ayarlar 
+    LEFT MARGİN: sola kenara olan uzaklığı ayarlar
+    RİGHT MARGİN : sağ kenara olan uzaklığı ayarlar 
+    ONLOAD : sayfa yüklenirken çalıştırılacak JavaScript betiğini belirler.
+    ONUNLOAD: başka bir sayfaya geçerken çalıştırılacak JavaScript betiğini belirler
+    -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body text="#0000000" bgcolor="#ffffff" link="#808080" vlink="#eaeaeae" alink="#000000" background="/resim/araştır/aktif.gif">
+    
+    </body>
+    </html>
+    <!-- META ETİKETİ 
+        NE İŞE YARAR? 
+        -head etiketinin yorum aralığına tanımlarız web istemcisine arama motorlarona sayfa hakkında bilgi verir.
+        -->
+    <meta charset="utf-8">
+    <meta name="author" content="WEB ÇALIŞMA GRUBU">
+    <!--BR VE P ETİKETİ 
+        -alt satıra geçmek için kullanırız vereceğimiz mesajlarda-->
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title></title>
+        </head>
+        <body>
+            <h1>mesela buraya yazdım <br>br den sonra aşağıya iner <p>şimdi bir satır aşağıya iner</p></h1>
+        </body>
+        </html>
+<!-- <PRE></PRE> ETİKETİ
+    ne işe yarar? 
+    -Bir kod parçası, konsol ekranı alıntısında ascii-art gibi içinde boşluk olmaması gerektiren metinleri görüntülemek için kullanılır
+    -<pre> etiketinin yorum aralığındaki metnin boşluklarını olduğu gibi görüntüler-->
+        <pre>
+        switch($i){
+        case "2" : 
+            echo "değeri 2" ;
+            break;
+    }
+        </pre><!--gibi metinlerin arasındaki boşlukları kapatır-->
+<!-- CENTER ETİKETİ 
+    -metinleri ortalamaya yarar -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    seydişehir <br> myo 
+    gölbaşı myo <br>
+    <center>NECMETTİN</center>
+    <h1>yazıların ve başlıkların büyüklükleri için kullanılır</h1>
+    <p>paragraf yazmak için kullanılır</p>
+    </body>
+    </html>
+<!-- MARQUEE KAYAN YAZI 
+    -bildiğin kayan yazı oluşturmak için kullanılır.-->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>başlık</title>
+    </head>
+    <body>
+    <marquee> <font color="red" size="7">beni izleyin</font></marquee>
+    <marquee direction="right"><!--up,down konulabili--> <font color="red" size="7">beni izleyin</font></marquee>
+    </body>
+    </html>
+<!-- A etiketi
+    -link gibi işlemler için kullanılır-->
+    <a href="http://www.konya.edu.tr"><img src="konya.png" border="0"></a>
+    <b>kalın</b> <i>eğik</i> <s>üzeri çizili</s> <u>altı çizili</u> <small>küçük</small> <big>büyük</big> <tt>daktilo yazısı</tt>
+
+    H<sub>2</sub>SO<sub>4</sub><br>
+    E = mc<sup>2</sup>
+
+    <ol>liste oluştururken kullan</ol>
+    <ul>sıralama elemanı 1-2-3... gibi</ul>
+    <li>listeler * gibi işaret ile</li>
+    <!-- LİSTE ÖRNEĞİ-->
+    <ol>
+        <li>birinci öğe...</li>
+        <li>ikinci öğe...
+        <ul type="square">
+            <li>ikinci öğenin bir öğesi...</li>
+            <li>ikinci öğenin bir başka öğesi</li>
+        </ul>
+        </li>
+        <li>üçüncü öğe</li>
+    </ol>
+<!-- ACRONYM kısaltmalar için kullanırız-->
+<acronym title=" Linux kullanıcıları derneği">LKD</acronym><!--fare ile üstüne gelindiğinde uzun hali balon içerisinde gösterilir.-->
+<!--2.SLAYT 
+    üzerinde duracağımız üç etiket var: <bgsound> <dynsrc> ve <embed>-->
+
+        <bgsound src="gulpembe.mid">
+<!--
+    *LOOP : ses dosyasının kaç defa çalınacağını belirtir.parametre kullanılmazsa 1 defa çalınır ses
+    *SRC : ses dosyasının yerini belirtir.
+    *VOLUME: ses seviyesini kontrol eder, azami ses için 0 değeri, asgari ses için -10.000 değeri verilmelidir
+    ÖRNEK:-->
+    <bgsound src="gulpembe.mid" balance="+10000" loop="3" volume="-100">
+    <bgsound src="katibim.mid" loop="-1">
+    <!--sayfalarımızın google ve explorer da da çalmasını istiyorsak aşağıdakini yazmalıyız.-->
+    <embed src="gulpembe.mid" width="200" height="25"></embed>
+    <!-- TABLOLAR (<TABLE></TABLE>)-->
+
+    <!-- bir hücrelik tablo yapımı -->
+    <table border="1">
+        <tr>
+            <td>hücre</td>
+        </tr>
+    </table>
+    <!-- yan yana iki hücrelik tablo yapımı -->
+    <table border="1">
+        <tr>
+            <td>hücre1</td>
+            <td>hücre2</td>
+        </tr>
+    </table>
+    <!--alt alta 2 yan yana 2 hücreli tablo yapımı-->
+    <table border="1">
+        <tr>
+            <td>hücre1</td>
+            <td>hücre2</td>
+        </tr>
+        <tr>
+            <td>hücre3</td>
+            <td>hücre4</td>
+        </tr>
+    </table>
+<!-- tablolara CAPTİON (Başlık) etiketi atanabilir-->
+<!-- border="x" ile x e vereceğimiz değerler kenarlarını kalınlaştırır 0 girersek kenarı olmaz direkt gözükür-->
+<!-- cellpading = metnin tablo ile arasındaki uzaklığı belirlemek için kullanırız-->
+<table border="1" cellpadding="5">
+    <tr>
+        <td>hücre</td>
+    </tr>
+</table>
+<!-- cellspacing hücreler arası marjı belirler-->
+<table border="1" cellspacing="5">
+    <tr>
+        <td>hücre</td>
+        <td>hücre2</td>
+    </tr>
+</table>
+<!-- align= "center","LEFT","right" sağa sola ve ortalama şeklinde tabloları belirlemek için yazarız-->
+<table border="1" align="LEFT">
+    <tr>
+        <td>hücre</td>
+    </tr>
+    <tr>
+        <td>hücre2</td>
+    </tr>
+</table>
+
+<!-- widht height en ve boy belirleme hücre içinde -->
+<table border="1" width=150 height=200></table>
+    <tr>
+        <td>hücre</td>
+    </tr>
+    <tr>
+        <td>hücre</td>
+    </tr>
+</table>
+<!-- bgcolor widht height align valign(top,middle,bottom olarak yazılır <td> içine) bgcolor hücreyi renklendirme amaçlı kullanılır-->
+<table border="1" cellpadding="7"></table>
+    <tr>
+        <td bgcolor="red">hücre</td>
+    </tr>
+    <tr>
+        <td bgcolor="#0000ff">hücre2</td>
+    </tr>
+    <tr>
+        <td backgorund="resim.jpg">hücre3</td>
+    </tr>
+</table>
+<!-- HÜCRELERİ BİRLEŞTİRMEK İÇİN COLSPAN VE ROWSPAN KULLANRIZ-->
+<table border="1" cellpadding="12">
+    <tr><td colspan="2">A</td><td>a</td></tr>
+</table>
+<!-- FRAME (çerceveler)
+    frameleri aslında bir browser penceresinde birden fazla web sayfasını görüntülemek olarak tanımlayabiliriz.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>çerçeveli sayfa</title>
+</head>
+<frameset cols="30%,70%">
+    <frame name="solçerceve" src="cerceve1.html" frameborder="yes/no" bordercolor="red" scrolling="yes">
+    <frame name="sağcerceve" src="cerceve2.html" noresize="1" scrolling="auto"><!--norsize mouse ile çerçevelerin ölçüleriyle oynamaya izin verir--><!--scrolling ise kaydırma çubuklarını konrtol eder-->
+    <noframes>browser'ınız çerçeve teknolojisini desteklemiyor lütfen yenileyin!</noframes>
+</frameset>
+</html>
+<!--
+    *_BLANK:yanıtı yeni bir pencerede veya sekmede açar.
+    *_SELF: yanıtı aynı çerceve içerisinde açar
+    *_PARENT: yanıtı ana frame'de açar
+    *_top: yanıtı pencerenin gövdesinde açar-->
+<!-- FORM VE CGL ETİKETLERİ-->
+<form action="url" method="post/get">
+<!-- GET VE POST 
+    *ziyaretçinin bilgisayarı ile web server arasında kurulacak HTTP protokolüne dayanan bağlantı sırasında, ziyaretçinin servera bu iki yöntemden birisiyle bilgi gönderilmesini sağlar-->
+
+<!--<input> etiketi ile ziyaretçiye, forma, klavyesinden veya mouse ile işaretlemek suretiyle bilgi girmesi imkanı veririz. Bu etiketi kullanmanın genel biçimi şöyledir:-->
+<input type="..." name="..." value="..." size="..." maxlength="..."> 
+
+<form name="kimlik_bilgileri">
+Adınız: <input type="text" name="Adiniz" value="Buraya adınızı yazın" size="25" maxlength="25">
+</form> 
+value:<!--değer : radio ve checkbox dışında bu parametrenin kullanımı isteğe bağlıdır-->
+<form name="sifre_bilgileri">
+Şifreniz: <input type="password" name="Sifreniz" size="10" maxlength="10">
+</form> 
+
+<form name="ilgi_alanlari">
+İlgi Alanlarınız: <br><br>
+    <input type="checkbox" name="ilgi1" checked> Internet<br>
+    <input type="checkbox" name="ilgi2"> Tarih<br>
+    <input type="checkbox" name="ilgi3"> Sinema<br>
+    <input type="checkbox" name="ilgi4"> Müzik<br>
+</form>
+<!--Radyo düğmeleri oluşturmak için: type="radio"
+İşaretlenecek yerin kare kutu değil de bir daire olması dışında bu unsurun bütün özellikleri ve ilkeleri checkbox’a benzer. 
+-->
+<form name="ogrenim_bilgileri">
+Öğrenim Durumunuz: <br><br>
+    <input type="radio" name="ogrenim" value="ilk"> İlkokul<br>
+    <input type="radio" name="ogrenim" value="orta"> Ortaokul<br>
+    <input type="radio" name="ogrenim" value="lise"> Lise<br>
+    <input type="radio" name="ogrenim" value="universite" checked> Üniversite<br>
+</form>
+<!--Gizli metin alanları oluşturmak için: type="hidden"
+Formda görüntülenmeyen, kullanıcının müdahale edemeyeceği ve CGI programlarına gönderilmesini istediğimiz bilgiler için bu yöntem kullanılır-->
+<form name="bilgiler">
+<input type="hidden" name="postala" value="mdurcan@webteknikleri.com">
+
+ADINIZ: <input type="text" name="adiniz" size="12"><br>
+SOYADINIZ: <input type="text" name="soyadiniz“ size="12"> <br>
+</form>
+<!--Server’a dosya göndermek için: type="file"
+Formda kullanıcının doldurması veya işaretlemesi gereken alanlarla birlikte kullanıcıya bize dosya gönderme imkanı da sağlayabiliriz-->
+<form name="ozgecmis">
+Önceden hazırlamış olduğunuz bir özgeçmişiniz varsa bize gönderebilirsiniz,<br>
+Dosyayı sabit diskinizden bulmak için lütfen düğmeye tıklayın 
+<br><br>
+<input type="file" name="cv">
+</form>
+
+<FORM ENCTYPE="multipart/form-data"
+      ACTION="URL"
+      METHOD=POST>
+Gönderilecek Dosya_Adı:<BR>
+  <INPUT NAME="message"
+         TYPE="file"> <BR> <BR>
+  <INPUT TYPE="submit"
+         VALUE="Dosyayı URL ye Gönder">
+</FORM>
+<!--<select name="..." size="..." [multiple]> ... </select>
+size parametresine 1,2 veya 3 vs. yazarak, ekrandaki kutunun kaç seçenek (veya satır) göstereceğini belirleyebilirsiniz. Bu parametre kullanılmazsa, otomatik olarak size="1" değeri kullanıldığı varsayılır. Kutuda gösterilecek seçenekler, <select> ... </select> etiketlerinin arasına <option> etiketi ile yazılır (<option> etiketi kapatılmaz). Herhangi bir seçeneğin otomatik olarak seçilmesi için seçeneği oluşturan <option> etiketi ile selected parametresi kullanılır. Örnek:-->
+<form name="urunler">
+Lütfen bilgi almak istediğiniz ürünü seçiniz:
+<br><br>
+<select name="urun_sec" size="1">
+    <option selected>Lütfen bir tercih yapınız
+    <option value="televizyon">Televizyon
+    <option value="buzdolabi">Buzdolabı
+    <option value="camasir_mak">Çamaşır Makinası
+    <option value="ev_aletleri">Küçük Ev Aletleri
+</select>
+</form>
+
+<!--Select ile çok-seçmeli-->
+<select name="menu" multiple>
+  <option selected="" value="none">Hiçbiri</option>
+  <optgroup label="Çorbalar">
+    <option value="c1">Tarhana</option>
+    <option value="c2">Ezogelin</option>
+    <option value="c3">İşkembe</option>
+  </optgroup>
+  <optgroup label="Tatlılar">
+    <option value="t1">Kazandibi</option>
+    <option value="t2">Tavukgöğsü</option>
+    <option value="t3">Keşkül</option>
+  </optgroup>
+</select>
+
+
+
+<select name="menu" multiple>
+  <option selected="" value="none">Hiçbiri</option>
+  <optgroup label="Çorbalar">
+    <option value="c1">Tarhana</option>
+    <option value="c2">Ezogelin</option>
+    <option value="c3">İşkembe</option>
+  </optgroup>
+  <optgroup label="Tatlılar">
+    <option value="t1">Kazandibi</option>
+    <option value="t2">Tavukgöğsü</option>
+    <option value="t3">Keşkül</option>
+  </optgroup>
+</select>
+
+<!--Metin Alanı: <textarea> Etiketi
+Metin kutusu Web Server'a ziyaretçinin uzun metin gönderebilmesini sağlar. Bu etiketin kullanım şekli şöyledir:
+<textarea name="..." rows="..." cols="...">Kutunun içine otomatik yazılması istenen metin buraya yazılır</textarea>-->
+
+<form name="metin_alani">
+Lütfen sitemiz hakkındaki eleştiri ve görüşlerinizi bize iletin:
+<br><br>
+<textarea name="elestiriler" rows="5" cols="40">Görüşlerinizi bu alana yazabilirsiniz</textarea>
+</form>
+
+<fieldset>
+  <legend>Kişisel Bilgiler</legend><br/>
+  Adı: <input name="personal_fname" type="text" size="20" tabindex="1"/>    
+  Soyadı: <input name="personal_lname" type="text" size="25" tabindex="2"/><br/><br/>
+  Adresi: <input name="personal_address" type="text" size="55" tabindex="3"/><br/><br/>
+  <!-- ...diğer kişisel bilgiler... -->
+ </fieldset>
+
+<INPUT type=range name="oranla" MIN=0 MAX=100 VALUE=25 STEP=5>100
+
+<!-- gönder ve sil -->
+<form name="form1>
+<pre>
+ADINIZ: <input type="text" name="adiniz" size="12"><br>
+SOYADINIZ: <input type="text" name="soyadiniz" size="12"><br>
+GÖRÜŞLERİNİZ:   
+</pre>
+<textarea name="gorus" cols="25" rows="4"></textarea><br><br>
+<input type="image" name="gonder" src="gonder.gif" border="0">
+</form>
+
+<!-- form bilgileri ile e posta göndermek-->
+<form name="form1" method="post" action="mailto:mdurcan@webteknikleri.com?subject=FORM" enctype="text/plain">
+<form name="form_dugmesi">
+<input type="button" name="dugme" value="Pencereyi Kapat"    onclick="yapılacak eylem veya fonksiyonun adı">
+</form>
+                                            <!-- HTML DE CSS -->
+
+<!-- html de css demek stil şablonları anlamına gelir-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+<!--
+p {
+    font-family: verdana;
+    font-size: 11px; 
+    color: brown}
+h1 {
+    color: blue
+}
+
+-->
+</style>
+<style type="text/css">
+<!--
+h1  {font-style: italic; color: red}
+p   {font-family: verdana; font-size: 11px; color: blue}/* css te açıklama böyle yapılır*/
+-->
+</style>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+<html>
+<head>
+<style type="text/css">
+<!--
+.metin {font-family: verdana}
+#yesil {color: green}
+-->
+</style>
+</head>
+<body>
+<p class="metin" id="yesil">HTML Rehberi</p>
+</body>
+</html>
+
+<html>
+<head>
+<style type="text/css">
+<!--
+.metin {font-family: verdana}
+#yesil {color: green}
+a:link  { color: #ff0000 }
+a:active    { color: #ffff00 }
+a:visited   { color: #0000ff }
+a:hover { color: #000000 }
+/*(<a>) ve paragraf (<p>) etiketlerinin değişik durumlarına uygulanabilir. 
+  Bağlantı etiketi için değişik durumlar şunlar olabilir, (1) normal bağlantı, (2) ziyaret edilmiş bağlantı, (3) aktif bağlantı (Yalnızca Internet Explorer için geçerli), (4) Mouse imlecinin bağlantının üzerinde bulunması durumu*/
+-->
+</style>
+</head>
+<body>
+<p class="metin" id="yesil">HTML Rehberi</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
